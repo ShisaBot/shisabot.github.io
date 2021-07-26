@@ -1,0 +1,66 @@
+---
+layout: default
+title: EUDD
+---
+
+<h1>End User Data Documentation</h1>
+
+<h2>Notes for everyone</h2>
+
+<h3>What data Shisa collects</h3>
+
+
+<p>Shisa and the cogs included with it collect some amount of data about users for the bot’s normal operations.</p>
+
+<p>The bot will keep track of a short history of usernames/nicknames. It will also remember which actions were taken using your Discord account (such as creating a playlist) as well as the content of specific messages used directly as commands for the bot (such as reports sent to servers).</p>
+
+<p>By default, Shisa will not collect any more data than it needs, and will not use it for anything other than the portion of the Shisa’s functionality that necessitated it.</p>
+
+<p>3rd party extensions may store additional data beyond what Shisa does by default. You can use the command shisa mydata 3rdparty to view statements about how extensions use your data made by the authors of the specific 3rd party extensions an instance of Shisa has installed.</p>
+
+<h3>How can I delete data Shisa has about me?</h3>
+
+<p>The command <code>shisa mydata forgetme</code> provides a way for users to remove large portions of their own data from the bot. This command will not remove operational data, such as a record that your Discord account was the target of a moderation action.</p>
+
+<p>3rd party extensions to Shisa are able to delete data when this command is used as well, but this is something each extension must implement. If a loaded extension does not implement this, the user will be informed.</p>
+
+<h2>Additional Notes for Bot Owners and Hosts</h2>
+
+<h3>How to comply with a request from Discord Trust & Safety<h3>
+
+<p>There are a handful of these available to bot owners in the command group</p>
+
+<code>shisa mydata ownermanagement</code>.
+
+<p></p>
+
+<p>The most pertinent one if asked to delete data by a member of Trust & Safety is
+
+<code>shisa mydata ownermanagement processdiscordrequest</code>
+
+<p>This will cause the bot to get rid of or disassociate all data from the specified user ID.</p>
+
+<h3>Warning</h3>
+<b>You should not use this unless Discord has specifically requested this with regard to a deleted user. This will remove the user from various anti-abuse measures. If you are processing a manual request from a user, read the next section</b>
+
+<p></p>
+
+<h3>How to process deletion requests from users</h3>
+
+<p>You can point users to the command <code>shisa mydata forgetme</code> as a first step.</p>
+
+<p>If users cannot use that for some reason, the command</p>
+
+<code>shisa mydata ownermanagement deleteforuser</code>
+
+<p></p>
+<p>exists as a way to handle this as if the user had done it themselves.</p>
+
+<p>Be careful about using the other owner level deletion options on behalf of users, as this may also result in losing operational data such as data used to prevent spam.</p>
+
+<h3>What owners and hosts are responsible for</h3>
+
+<p>Owners and hosts must comply both with Discord’s terms of service and any applicable laws. Owners and hosts are responsible for all actions their bot takes.</p>
+
+<p>We cannot give specific guidance on this, but recommend that if there are any issues you be forthright with users, own up to any mistakes, and do your best to handle it.</p>
+

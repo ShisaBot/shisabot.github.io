@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <meta http-equiv="refresh" content="5; URL=javascript:window.open('https://bit.ly/shisabot','_parent');">
+
+  <body>
+
+    {%- include views/header.html -%}
+
+    {%- include views/banner.html -%}
+
+    {%- include extensions/hashlocate.html -%}
+
+    {%- include extensions/theme-toggle.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include views/footer.html -%}
+
+  </body>
+</html>
